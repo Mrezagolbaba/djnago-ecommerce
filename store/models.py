@@ -57,6 +57,7 @@ class Address(models.Model):
     street = models.CharField(max_length=255) #max_length is a required field
     city = models.CharField(max_length=255) #max_length is a required field
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE) #on_delete is a required field  
+    zip= models.CharField(max_length=10,default='000000') #max_length is a required field
 
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.PROTECT) #on_delete is a required field
